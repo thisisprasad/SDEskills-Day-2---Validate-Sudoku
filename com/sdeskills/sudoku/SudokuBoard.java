@@ -103,4 +103,8 @@ public class SudokuBoard {
       this.board[x][y] = cellValue;
     }
   }
+
+  public void setCell(int x, int y, int value) {
+    this.board[x][y] = value;
+  }
 }

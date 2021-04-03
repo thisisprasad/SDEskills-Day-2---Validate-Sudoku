@@ -23,10 +23,26 @@ class Main {
     int choice = sc.nextInt();
     switch (choice) {
     case 1:
-      //enterBoardFromConsole();
+      enterBoardFromConsole(gameBoard);
       break;
     case 2:
       loadBoardDataFromFile(gameBoard);
+    }
+  }
+
+  private static void enterBoardFromConsole(SudokuBoard gameBoard) {
+    int x = 0;
+    int y = 0;
+    int value = 0;
+    while(x!=-1 && y!=-1 && value!=-1) {
+      System.out.print("\tEnter cell(x, y) and value to insert in cell(-1 -1 -1 to exit): ");
+      x = sc.nextInt();
+      y = sc.nextInt();
+      value = sc.nextInt();
+      if(x == -1 && y == -1 && value == -1) {
+        break;
+      }
+      gameBoard.setCell(x, y, value);
     }
   }
 
