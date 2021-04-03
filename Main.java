@@ -1,5 +1,11 @@
+import com.sdeskills.sudoku.SudokuBoard;
+
 class Main {
   public static void main(String[] args) {
-    System.out.println("Hello world!");
+    loadGame();
+  }
+
+  private static void loadGame() {
+    SudokuBoard gameBoard = new SudokuBoard();
   }
 }
